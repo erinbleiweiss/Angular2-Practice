@@ -1,0 +1,11 @@
+<h1>
+  {{title}}
+</h1>
+<hr>
+<div routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
+  <a [routerLink]="['']" [queryParams]="{analytics: 500}" [fragment]="'section1'">Home</a>
+</div>
+<input type="text" #id (input)="0">
+<a [routerLink]="['user', id.value]" [preserveQueryParams]="true" routerLinkActive="active">User</a>
+<hr>
+<router-outlet></router-outlet>
